@@ -1,0 +1,77 @@
+/*imports normalize*/
+@import "normalize.css";
+
+/*Grid containing the top items and text description. does not change to media query*/
+  .top {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: #66371d;
+    padding: 10px;
+    grid-gap: 10px
+
+  }
+  .topgrid-item{
+    background-color: #708859;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    font-size: 25px;
+    justify-content: center;
+  }
+
+/*text items and properties*/
+  h1{
+    font-family: Garamond, sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    color: white;
+  }
+  p{
+    font-family: Garamond;
+    font-size: 1.2em;
+    color: white;
+  }
+
+/*media query that activates when the screen is below 500 px wide*/
+@media screen and (max-width: 500px) {
+  /*grid that has 2 columns*/
+  .grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: #66371d;
+    padding: 10px;
+    grid-gap: 10px
+  }
+  .grid-item {
+    background-color: #886859;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    font-size: 25px;
+  }
+  /*specifications for dimensions of grid items*/
+    .wide {
+      grid-column: 1 / span 2;
+      grid-row: 1;
+    }
+    .long{
+      grid-row: 2 /span 2;
+
+    }
+    .square{
+      grid-column: auto;
+      grid-row: auto;
+    }
+    .bottom{
+      grid-column: 1 / span 2;
+      grid-row: 7;
+    }
+    
+/*formats for images*/
+  img{
+    max-width:100%;
+    width: fit-content;
+    min-height: auto;
+    border-radius: 10%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
